@@ -13,12 +13,12 @@ var getElementsByClassName = function(className) {
     if (node.className.indexOf(className) !== -1) {
       results.push(node);
     }
-      //if it does push to array
+    //if it does push to array
     //checkif current node has children
-    for (var i = 0; i < node.classList.length; i++) {
+    for (var i = 0; i < node.children.length; i++) {
       search(node.children[i]);
     }
-      // if it does, recursively check if they have classname
+    // if it does, recursively check if they have classname
   };
   //invoke function
   search(document.body);
